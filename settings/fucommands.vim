@@ -8,6 +8,7 @@ augroup AuFunctions
     "Starts terminal mode on insert mode
 	autocmd TermOpen * startinsert
     autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o " Disable autocomment on new line
+    autocmd VimEnter * hi VertSplit guibg=#21283B "Sets vsplit border colors
 augroup END
 
 " COMMANDS

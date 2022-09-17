@@ -34,8 +34,7 @@ set timeoutlen=500                      " By default timeoutlen is 1000 ms
 "set clipboard=unnamedplus              " Copy paste between vim and everything else
 set autochdir                          " Your working directory will always be the same as your working directory
 set sessionoptions=blank,buffers,curdir,folds,help,options,tabpages,winsize,terminal
-let g:dashboard_session_directory='/home/fjs/.config/nvim/sessions'
-set fillchars+=vert:\┃            "Set vertical split border▋██┃
+set fillchars+=vert:\            "Set vertical split border
 let g:floatLf_border = 1
 set t_Co=256
 set t_ut=
