@@ -5,3 +5,4 @@ Just my Neovim dotfiles, feel free to use them as inspiration. They'll change as
 * Migrate from init.vim to init.lua
 * More lazy loading
 * Format some stuff
+* Update README
