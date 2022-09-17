@@ -82,3 +82,6 @@ cmap w!! w !sudo tee %
 
 "Exit from terminal mode
 tnoremap <Esc> <C-\><C-n>
+
+"Toggle nvim-tree
+map <F6> :NvimTreeToggle<CR>
