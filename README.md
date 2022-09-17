@@ -1,4 +1,4 @@
-# my_nvim_dotfiles
+# NvimDotsLua
 Just my Neovim dotfiles, feel free to use them as inspiration. They'll change as I learn more about Neovim
 
 ## TODO
