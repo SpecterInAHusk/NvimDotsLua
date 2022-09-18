@@ -40,9 +40,6 @@ set t_Co=256
 set t_ut=
 set guicursor+=a:blinkon60
 
-"Highlights
-hi CursorLine guibg=#181B25
-
 "Disable Built-ins to reduce startup time
 let g:loaded_tutor_mode_plugin = 1
 let g:loaded_gzip = 1

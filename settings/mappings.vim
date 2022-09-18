@@ -41,8 +41,8 @@ inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
 "Better tabbing" 
 nnoremap <C-t> :tabnew<CR>
 "nnoremap <F28> :tabs<CR>
-nnoremap <TAB> gt<CR>
-nnoremap <S-TAB> gT<CR>
+nnoremap <TAB> :TablineBufferNext<CR>
+nnoremap <S-TAB> :TablineBufferPrevious<CR>
 
 " Better window navigation
 nnoremap <C-h> <C-w>h

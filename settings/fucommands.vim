@@ -9,6 +9,7 @@ augroup AuFunctions
 	autocmd TermOpen * startinsert
     autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o " Disable autocomment on new line
     autocmd VimEnter * hi VertSplit guibg=#21283B "Sets vsplit border colors
+    autocmd VimEnter * hi CursorLine guibg=#181B25 "Sets current line color
 augroup END
 
 " COMMANDS
