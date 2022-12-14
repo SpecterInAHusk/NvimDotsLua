@@ -1,7 +1,7 @@
 " noh - no highlight
 nnoremap <esc> :noh <CR>
 
-"Select everything
+" Select everything
 nnoremap <M-a> ggVG
         
 " set leader key
@@ -20,8 +20,7 @@ inoremap <c-u> <ESC>viwUi
 nnoremap <c-u> viwU<Esc>
 vnoremap <c-u> viwU<Esc>
 
-
-"Alternate way to save"
+" Alternate way to save"
 nnoremap <C-s> :w<CR>
 " Alternate way to quit
 nnoremap <C-Q> :qa!<CR>
@@ -38,11 +37,8 @@ inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 " Confirm with Enter
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-"Better tabbing" 
+" Better tabbing" 
 nnoremap <C-t> :tabnew<CR>
-"nnoremap <F28> :tabs<CR>
-nnoremap <TAB> :TablineBufferNext<CR>
-nnoremap <S-TAB> :TablineBufferPrevious<CR>
 
 " Better window navigation
 nnoremap <C-h> <C-w>h
@@ -53,35 +49,41 @@ nnoremap <C-l> <C-w>l
 nnoremap <Leader>o o<Esc>^Da
 nnoremap <Leader>O O<Esc>^Da
 
-"Terminal
+" Terminal
 nnoremap <F3> :10sp \| term <CR>
 nnoremap <F4> :tabnew \| term <CR>
 
-"Better clipboard copy/paste
+" Better clipboard copy/paste
 vnoremap <C-c> "+y
 vnoremap <C-v> "+p
 
-"Remap ; to :
+" Remap ; to :
 map ; :
 noremap ;; ;
 
-"Sneak Remappings
+" Sneak Remappings
 map <C-Up> <Plug>Sneak_,
 map <C-Down> <Plug>Sneak_;
 
-"Zoom
+" Auto pairs
+let g:AutoPairsShortcutToggle = '<M-p>'
+
+" Zoom
 nmap <Leader>,zo :tabnew %<CR>
 nmap <Leader>,zc :tabclose<CR>
 
-"Fuck Ctrl Y
+" Fuck Ctrl Y
 map <C-Z> <Nop>
 let g:user_emmet_leader_key='<C-Z>'
 
-"You can't stop me
+" You can't stop me
 cmap w!! w !sudo tee %
 
-"Exit from terminal mode
+" Exit from terminal mode
 tnoremap <Esc> <C-\><C-n>
 
-"Toggle nvim-tree
+" Toggle nvim-tree
 map <F6> :NvimTreeToggle<CR>
+
+" Toggle Telescope
+map <F7> :Telescope<CR>

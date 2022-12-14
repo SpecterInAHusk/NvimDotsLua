@@ -6,7 +6,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
     -- TODO use NvChad as inspiration to organize this mess
-    -- and set lazyload conditions
+    -- TODO install and configure DAP or vimspector
 
 return require('packer').startup(function(use)
 	use { 'wbthomason/packer.nvim' }
@@ -15,15 +15,51 @@ return require('packer').startup(function(use)
 
 	use { 'lewis6991/impatient.nvim' }
 
-	use { 'neoclide/coc.nvim' }
-
-	use { 'rafamadriz/friendly-snippets'}
-
-	use { 'honza/vim-snippets'}
-
 	use { 'SirVer/ultisnips' }
 
-	use { 'luochen1990/rainbow', run = ':RainbowToggleOn'}
+    -- New stuff
+
+    use {'puremourning/vimspector'}
+
+    use { 'KabbAmine/vCoolor.vim' }
+
+    use { 'neovim/nvim-lspconfig' }
+    
+    use { 'kabouzeid/nvim-lspinstall' }
+
+    use{
+    "glepnir/lspsaga.nvim",
+    branch = "main",
+    config = function()
+        local saga = require("lspsaga")
+
+        saga.init_lsp_saga({
+            -- your configuration
+        })
+    end,
+}
+    -- Configure lasaga in another file and require here, and configure
+    -- lspinstall stuff 
+
+    -- Cmp Stuff
+
+    use { 'hrsh7th/cmp-nvim-lsp' }
+
+    use { 'hrsh7th/cmp-buffer' }
+
+    use { 'hrsh7th/cmp-path' }
+
+    use { 'hrsh7th/cmp-cmdline' }
+
+    use { 'quangnguyen30192/cmp-nvim-ultisnips' }
+
+    use { 'hrsh7th/nvim-cmp' }
+
+    -- TODO configure lua stuff for cmp
+
+    -- End cmp
+
+	use { 'luochen1990/rainbow', event = 'VimEnter' }
 
 	use { 'kyazdani42/nvim-web-devicons' }
 
@@ -32,6 +68,8 @@ return require('packer').startup(function(use)
 		cmd = 'Telescope',
 		requires = { 'nvim-lua/plenary.nvim' },
 	}
+
+    -- Set F7 as Telescope shortcut
 
 	use { 'lukas-reineke/indent-blankline.nvim', cmd = 'IndentBlanklineToggle' }
 
@@ -82,8 +120,6 @@ return require('packer').startup(function(use)
 
 	use { 'jiangmiao/auto-pairs' }
 
-    use {'jsborjesson/vim-uppercase-sql', ft = 'sql'}
-
 	use { 'mhinz/vim-signify', event = 'VimEnter' }
 
 	use { 'mattn/emmet-vim', ft = { 'html', 'xml', 'yaml' } }
@@ -133,10 +169,6 @@ return require('packer').startup(function(use)
 	}
 
 	use { 'lervag/vimtex', ft = 'tex' }
-
-	-- TODO Decide which filetypes should load ALE
-
-	use { 'dense-analysis/ale'}
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

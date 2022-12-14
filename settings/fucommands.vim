@@ -8,8 +8,13 @@ augroup AuFunctions
     "Starts terminal mode on insert mode
 	autocmd TermOpen * startinsert
     autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o " Disable autocomment on new line
+augroup END
+
+augroup Highlights
     autocmd VimEnter * hi VertSplit guibg=#21283B "Sets vsplit border colors
     autocmd VimEnter * hi CursorLine guibg=#181B25 "Sets current line color
+    autocmd VimEnter * hi Search guibg=#0040bf guifg=#f0f0f0
+    autocmd VimEnter * hi IncSearch guibg=#8300bf guifg=#f0f0f0
 augroup END
 
 " COMMANDS
@@ -25,3 +30,7 @@ function! CheckBackspace() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
+" MACROS
+
+let @a = "ggVG\"*y"

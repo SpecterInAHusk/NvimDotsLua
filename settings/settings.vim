@@ -1,6 +1,6 @@
 "syntax enable                          " Enables syntax highlighing (can be disabled due to the plugins)
 set hidden                              " Required to keep multiple buffers open multiple buffers
-set nowrap                              " Wrap Lines
+set wrap linebreak                      " Wrap Lines
 set encoding=utf-8                      " The encoding displayed
 set pumheight=10                        " Makes popup menu smaller
 set fileencoding=utf-8                  " The encoding written to file

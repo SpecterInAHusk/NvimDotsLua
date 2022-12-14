@@ -6,7 +6,6 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
     -- TODO use NvChad as inspiration to organize this mess
-    -- and set lazyload conditions
 
 return require('packer').startup(function(use)
 	use { 'wbthomason/packer.nvim' }
@@ -23,7 +22,7 @@ return require('packer').startup(function(use)
 
 	use { 'SirVer/ultisnips' }
 
-	use { 'luochen1990/rainbow', run = ':RainbowToggleOn'}
+	use { 'luochen1990/rainbow', event = 'VimEnter' }
 
 	use { 'kyazdani42/nvim-web-devicons' }
 
@@ -80,9 +79,7 @@ return require('packer').startup(function(use)
 
 	use { 'justinmk/vim-sneak', keys = { 's', 'S' } }
 
-	use { 'jiangmiao/auto-pairs' }
-
-    use {'jsborjesson/vim-uppercase-sql', ft = 'sql'}
+	use { 'jiangmiao/auto-pairs', event = 'VimEnter' }
 
 	use { 'mhinz/vim-signify', event = 'VimEnter' }
 
